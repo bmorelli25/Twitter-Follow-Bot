@@ -1,0 +1,24 @@
+{
+  "name": "twitter-follow-bot",
+  "version": "1.0.0",
+  "description": "twitter follow bot",
+  "main": "follow.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmorelli25/Twitter-Follow-Bot.git"
+  },
+  "keywords": [
+    "twitter",
+    "bot",
+    "node"
+  ],
+  "author": "brandon morelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmorelli25/Twitter-Follow-Bot/issues"
+  },
+  "homepage": "https://github.com/bmorelli25/Twitter-Follow-Bot#readme"
+}
