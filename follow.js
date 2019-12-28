@@ -6,7 +6,7 @@ var T = new Twitter(config);
 var params = {
   q: '#nodejs',
   count: 10,
-  result_type: 'popular',
+  result_type: 'recent',
   lang: 'en'
 }
 
