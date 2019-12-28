@@ -4,7 +4,8 @@
   "description": "twitter follow bot",
   "main": "follow.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node follow.js"
   },
   "repository": {
     "type": "git",

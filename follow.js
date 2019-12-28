@@ -6,7 +6,7 @@ var T = new Twitter(config);
 var params = {
   q: '#nodejs',
   count: 10,
-  result_type: 'recent',
+  result_type: 'popular',
   lang: 'en'
 }
 
@@ -14,10 +14,14 @@ var params = {
 T.get('search/tweets', params, function(err, data, response) {
   // If there is no error, proceed
   if(!err){
+    // we will follow only those users having more than 1000 followers
+    const popularUsers = data.statuses.filter(user => {
+      return user.followers_count > 1000;
+    });
     // Loop through the returned tweets
-    for(let i = 0; i < data.statuses.length; i++){
+    for(let i = 0; i < popularUsers.length; i++){
       // Get the screen_name from the returned data
-      let screen_name = data.statuses[i].user.screen_name;
+      let screen_name = popularUsers[i].user.screen_name;
       // THE FOLLOWING MAGIC GOES HERE
       T.post('friendships/create', {screen_name}, function(err, response){
         if(err){
